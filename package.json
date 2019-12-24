@@ -4,6 +4,9 @@
   "description": "Sandbox app for learning how to build a node app",
   "main": "index.js",
   "scripts": {
+    "prod": "node ./start.js",
+    "watch": "nodemon ./start.js --ignore public/",
+    "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aaron Endsley",
