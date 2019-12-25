@@ -1,8 +1,15 @@
 const express = require('express');
+const expressValidator = require('express-validator');
 const app = express();
 const routes = require('./routes/index');
-// app.use(app.router);
-// routes.initialize(app);
+const bodyParser = require('body-parser');
+const path = require('path');
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(expressValidator());
 app.use('/', routes);
 
 module.exports = app;
