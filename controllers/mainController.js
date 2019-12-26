@@ -1,3 +1,3 @@
 exports.mainPage = (req, res) => {
-  res.render('mainPage');
+  res.render('mpContent', { title: 'We are super cool' });
 };
