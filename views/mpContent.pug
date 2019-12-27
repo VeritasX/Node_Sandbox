@@ -1,5 +1,12 @@
 extends mainPage
 
+include  mixins/_inputs
+
 block content
     h2= title
     p= sentence || 'some content will go here'
+    br
+
+    form(action='/' method="POST")
+        +inputForm()
+            
