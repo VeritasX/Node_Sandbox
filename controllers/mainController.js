@@ -10,7 +10,7 @@ exports.mainPage = async (req, res) => {
 
 exports.mainPageSubmit = async (req, res) => {
   req.body.browser = req.headers['user-agent'];
-  req.body.created = Date.now() * 60 * 1000;
+  req.body.created = new Date().getTime();
   console.log(req.body.created);
   const store = await new Entry(req.body).save();
   res.redirect('/');

@@ -7,7 +7,9 @@ mixin showEntries(entries)
             h3 #{entry.name}
             hr
             p #{entry.description}
-            p.browser= `Entry was made in ${entry.browser}`
+            p.browser= `Entry was made with ${entry.browser}`
+            p.created= `Created on ${new Date(entry.created)}`
+            br
     else
         p= 'No Data to Display'
         
