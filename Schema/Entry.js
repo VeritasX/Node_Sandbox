@@ -16,8 +16,8 @@ const entrySchema = new mongoose.Schema({
   },
   browser: String,
   created: {
-    type: Date,
-    default: Date.now()
+    type: Number,
+    required: 'You must create a date'
   }
 });
 

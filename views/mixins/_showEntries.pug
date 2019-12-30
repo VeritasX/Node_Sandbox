@@ -7,5 +7,7 @@ mixin showEntries(entries)
             h3 #{entry.name}
             hr
             p #{entry.description}
+            p.browser= `Entry was made in ${entry.browser}`
     else
         p= 'No Data to Display'
+        
