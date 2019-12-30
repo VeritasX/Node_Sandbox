@@ -1,5 +1,11 @@
 mixin showEntries(entries)
+
     .entries
-        pre #{entries}
-        //- each entry in entries
-            
+        //- pre #{entries}
+    if entries.length
+        each entry in entries
+            h3 #{entry.name}
+            hr
+            p #{entry.description}
+    else
+        p= 'No Data to Display'
