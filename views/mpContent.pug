@@ -1,6 +1,7 @@
 extends mainPage
 
 include  mixins/_inputs
+include  mixins/_showEntries
 
 block content
     h2= title
@@ -9,4 +10,6 @@ block content
 
     form(action='/' method="POST")
         +inputForm()
+    
+    +showEntries(data)
             

@@ -1,17 +1,14 @@
 const mongoose = require('mongoose');
 const Entry = mongoose.model('Entry');
-exports.mainPage = (req, res) => {
-  res.render('mpContent', { title: 'We are super cool' });
+
+exports.mainPage = async (req, res) => {
+  let data = await Entry.find();
+  data = data.sort((a, b) => new Date(b.created) - new Date(a.created));
+  res.render('mpContent', { title: 'We are super cool', data });
 };
 
 exports.mainPageSubmit = async (req, res) => {
-  const fullReq = {
-    name: req.body.name,
-    description: req.body.description,
-    browser: req.headers['user-agent']
-  };
   req.body.browser = req.headers['user-agent'];
-  console.log(req.body);
   const store = await new Entry(req.body).save();
-  res.render('mpContent', { title: 'Data Submited', sentence: `${req.body.name} has been submitted` });
+  res.redirect('/');
 };

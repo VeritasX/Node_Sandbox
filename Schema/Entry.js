@@ -14,7 +14,11 @@ const entrySchema = new mongoose.Schema({
     trim: true,
     required: 'You must give a description'
   },
-  browser: String
+  browser: String,
+  created: {
+    type: Date,
+    default: Date.now()
+  }
 });
 
 entrySchema.pre('save', async function(next) {

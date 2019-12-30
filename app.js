@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(expressValidator());
 
-console.log(process.env);
 app.use(
   session({
     secret: process.env.SECRET,
