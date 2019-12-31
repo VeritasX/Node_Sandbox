@@ -4,12 +4,13 @@ include  mixins/_inputs
 include  mixins/_showEntries
 
 block content
-    h2= title
-    p= sentence || 'some content will go here'
+    h2.title= title
+    p.instructions= sentence || 'some content will go here'
     br
-
-    form(action='/' method="POST")
-        +inputForm()
-    
-    +showEntries(data)
-            
+    div.container 
+        .formField
+            form(action='/' method="POST")
+                +inputForm()
+        
+        +showEntries(data)
+                

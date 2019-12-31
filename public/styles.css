@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h2 {
   margin-top: 110px;
@@ -16,19 +17,128 @@ header {
 }
 
 header .main {
-  width: 50%;
-  margin-left: 20px;
+  width: 90%;
+  margin: 25px auto;
   height: 25px;
 }
 
 header h1 {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #fff;
+}
+label {
+  margin: 5px auto;
+  display: block;
+  width: 80%;
+}
+input {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  font-size: 1.2rem;
+}
+textarea {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  height: 100px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type='submit'] {
+  color: #fff;
+  font-size: 1.4rem;
+  width: 40%;
+  font-weight: bold;
+  background-color: #23005e;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  margin: 10px auto;
+  display: block;
+}
+.title {
+  color: #23005e;
+  font-size: 1.5rem;
+  margin: 130px 0 5px 0;
+}
+.instructions {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0 auto;
+  line-height: 1.2rem;
+  height: 50px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.formField {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.formFieldStyle {
+  border: solid 4px #23005e;
+  border-radius: 20px;
+  padding: 50px;
+}
+.entries {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: space-between;
+}
+
+.entry {
+  width: 80%;
+  border: solid 6px #23005e;
+  padding: 10px;
+  flex: 1;
+  margin: 5px auto 20px auto;
+  border-radius: 20px;
+}
+.entry h3 {
+  font-size: 1.6rem;
+  color: #23005e;
+  margin-bottom: 1px;
+}
+
+.entry hr {
+  color: #23005e;
+  border: solid 3px #23005e;
+  border-radius: 20px;
+  margin-top: 0;
+}
+
+.entry p {
+  font-size: 1rem;
+  letter-spacing: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 2% 10px 2%;
+}
+
+.entry p.browser {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0 10% 0% 10%;
+}
+.entry p.created {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0 10% 0% 10%;
 }
 
 @media only screen and (min-width: 1000px) {
   header h1 {
     font-size: 2rem;
+  }
+  .container {
+    flex-direction: row;
   }
 }

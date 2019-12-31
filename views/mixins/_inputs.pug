@@ -1,8 +1,11 @@
 mixin inputForm()
-      label(for="name") Name
-        input(type="text" name="name" value='')
-        br
-        label(for="description") Description
-        textarea(name="description" value='')
-        br
-        input(type="submit" value="Save" class="button")
+        .formFieldStyle
+                label(for="name") Name
+                br
+                input(type="text" name="name" value='')
+                br
+                label(for="description") Description
+                br
+                textarea(name="description" value='')
+                br
+                input(type="submit" value="Save" class="button")

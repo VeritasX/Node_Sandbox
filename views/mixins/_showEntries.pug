@@ -1,15 +1,14 @@
 mixin showEntries(entries)
-
     .entries
-        //- pre #{entries}
-    if entries.length
-        each entry in entries
-            h3 #{entry.name}
-            hr
-            p #{entry.description}
-            p.browser= `Entry was made with ${entry.browser}`
-            p.created= `Created on ${new Date(entry.created)}`
-            br
-    else
-        p= 'No Data to Display'
+        if entries.length
+            each entry in entries
+                .entry
+                    h3 #{entry.name}
+                    hr
+                    p #{entry.description}
+                    p.browser= `Entry was made with ${entry.browser}`
+                    p.created= `Created on ${new Date(entry.created)}`
+                br
+            else
+                p= 'No Data to Display'
         
