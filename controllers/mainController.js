@@ -34,3 +34,11 @@ exports.success = async (req, res) => {
 exports.redirectSuccess = (req, res) => {
   res.redirect('/');
 };
+
+//Give the option to delete the selected entry in its Description Page
+//I will finish this later as i need to create the poge that allows you to select specific stores
+exports.deleteItem = async (req, res) => {
+  const data = await Entry.find(req.params.id);
+};
+
+/// Also need to create a 404 middle ware
