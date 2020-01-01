@@ -3,7 +3,9 @@ mixin showEntries(entries)
         if entries.length
             each entry in entries
                 .entry
-                    h3 #{entry.name}
+                    h3 
+                        a(href=`/entry/${entry._id}`) #{entry.name}
+                        - console.log(entry._id)
                     hr
                     p #{entry.description}
                     p.browser= `Entry was made with ${entry.browser}`

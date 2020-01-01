@@ -1,0 +1,13 @@
+extends mainPage
+
+include mixins/_showEntries
+
+block content
+    .entries-item
+        .entry
+            h3 #{data.name}
+            hr
+            p #{data.description}
+            p.browser= `Entry was made with ${data.browser}`
+            p.created= `Created on ${new Date(data.created)}`
+            br

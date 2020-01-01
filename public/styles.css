@@ -94,7 +94,10 @@ input[type='submit'] {
   flex: 3;
   justify-content: space-between;
 }
-
+.entries-item {
+  width: 80%;
+  margin: 150px auto;
+}
 .entry {
   width: 80%;
   border: solid 6px #23005e;

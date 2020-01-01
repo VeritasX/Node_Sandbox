@@ -7,5 +7,6 @@ router.post('/', mainRoutes.mainPageSubmit);
 router.get('/success/:name', mainRoutes.success);
 router.post('/success/:name', mainRoutes.success);
 router.get('/success', mainRoutes.redirectSuccess);
+router.get('/entry/:id', mainRoutes.entryPage);
 
 module.exports = router;
