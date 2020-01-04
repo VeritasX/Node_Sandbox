@@ -40,10 +40,10 @@ exports.entryPage = async (req, res) => {
   res.render('entryPage', { data: entry });
 };
 
-//Give the option to delete the selected entry in its Description Page
-//I will finish this later as i need to create the poge that allows you to select specific entrys
 exports.deleteItem = async (req, res) => {
-  const data = await Entry.find(req.params.id);
+  const data = await Entry.remove({ _id: req.params.id });
+  //add flashes later that will tell the user that the item was deleted or gives an error when they do not own the item
+  res.redirect('/');
 };
 
 /// Also need to create a 404 middle ware

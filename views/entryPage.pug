@@ -11,3 +11,5 @@ block content
             p.browser= `Entry was made with ${data.browser}`
             p.created= `Created on ${new Date(data.created)}`
             br
+            button.delete
+                a(href=`/delete/data/${data._id}`) Delete This Entry

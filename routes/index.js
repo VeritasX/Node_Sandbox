@@ -8,5 +8,6 @@ router.get('/success/:name', mainRoutes.success);
 router.post('/success/:name', mainRoutes.success);
 router.get('/success', mainRoutes.redirectSuccess);
 router.get('/entry/:id', mainRoutes.entryPage);
+router.get('/delete/data/:id', mainRoutes.deleteItem);
 
 module.exports = router;
