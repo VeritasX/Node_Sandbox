@@ -7,6 +7,6 @@ block content
     br
     div.container 
         .formField
-            form(action='/' method="POST")
+            form(action=`/edit/data/${data._id}` method="POST")
                 +inputForm(data)
                 

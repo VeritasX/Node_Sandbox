@@ -42,14 +42,16 @@ exports.entryPage = async (req, res) => {
 
 exports.editPage = async (req, res) => {
   const data = await Entry.findOne({ _id: req.params.id });
+  console.log(req.params.id);
   res.render('editPage', { data: data });
 };
 
-exports.updateEntry = async (res, req) => {
+exports.updateEntry = async (req, res) => {
   const entry = await Entry.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
     runValidators: true
   }).exec();
+  console.log(req.params.id);
   res.render('entryPage', { data: entry });
 };
 
