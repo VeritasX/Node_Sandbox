@@ -1,11 +1,11 @@
-mixin inputForm()
+mixin inputForm(data={})
         .formFieldStyle
                 label(for="name") Name
                 br
-                input(type="text" name="name" value='')
+                input(type="text" name="name" value=data.name)
                 br
                 label(for="description") Description
                 br
-                textarea(name="description" value='')
+                textarea(name="description")= data.description
                 br
                 input(type="submit" value="Save" class="button")

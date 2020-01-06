@@ -40,6 +40,19 @@ exports.entryPage = async (req, res) => {
   res.render('entryPage', { data: entry });
 };
 
+exports.editPage = async (req, res) => {
+  const data = await Entry.findOne({ _id: req.params.id });
+  res.render('editPage', { data: data });
+};
+
+exports.updateEntry = async (res, req) => {
+  const entry = await Entry.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true,
+    runValidators: true
+  }).exec();
+  res.render('entryPage', { data: entry });
+};
+
 exports.deleteItem = async (req, res) => {
   const data = await Entry.remove({ _id: req.params.id });
   //add flashes later that will tell the user that the item was deleted or gives an error when they do not own the item

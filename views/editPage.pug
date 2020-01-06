@@ -1,0 +1,12 @@
+extends mainPage
+
+include  mixins/_inputs
+
+block content
+    h2.title= `Edit entry: ${data.name}`
+    br
+    div.container 
+        .formField
+            form(action='/' method="POST")
+                +inputForm(data)
+                

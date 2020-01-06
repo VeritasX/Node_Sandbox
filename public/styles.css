@@ -155,7 +155,7 @@ input[type='submit'] {
   padding: 0 10% 0% 10%;
 }
 
-.delete {
+button {
   border: none;
   color: #fff;
   background-color: #23005e;
@@ -163,13 +163,15 @@ input[type='submit'] {
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
+  margin: 20px auto;
+  display: block;
 }
 
-.delete a:link {
+button a:link {
   color: #fff;
 }
 
-.delete a:visited {
+button a:visited {
   color: #fff;
 }
 
@@ -179,5 +181,10 @@ input[type='submit'] {
   }
   .container {
     flex-direction: row;
+  }
+  button {
+    margin-left: 50px;
+    margin-right: 0;
+    display: inline-block;
   }
 }
